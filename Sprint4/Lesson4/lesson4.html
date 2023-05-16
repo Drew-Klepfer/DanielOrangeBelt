@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+    
+    <style>
+        .box {
+            background-color: #CBC1E1;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .coordinateBox {
+            background-color: white;
+            margin: 20px auto;
+            cursor: pointer;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+
+        <!-- call the onmouseover and onmouseout event functions in this div -->
+        <div onmouseover="mOver(this)"onmouseout="mOut(this)"class="box">
+            Mouse over me
+        </div>
+
+        <!-- use onclick() to change the text -->
+        <h2>Click on this text!</h2>
+
+        <!-- hidden text -->
+        <h2>Hidden element!</h2>
+        <button type="button"></button>
+        <button type="button"></button>
+        <p id="hidden"></p>
+
+        <!-- challenges -->
+        <div class="coordinateBox"onmouseover="showCoord(event)">
+            <p id="coordinates"></p>
+
+        </div>
+
+        <p id="screenSize"></p>
+    </div>
+
+    <script>
+        /* edit the div to display secret text in the mOver and mOut functions using innerHTML */
+        function mOver(obj) {
+            obj.innerHTML = "test";
+            /* what is obj? can we look at it? try using console.log... */
+            console.log(obj)
+        }
+
+        /* edit the div to display default text when the user moves their mouse off the box*/
+        function mOut(obj) {
+            obj.innerHTML = "Mouse over me";
+        }
+
+        /* CHALLENGES! */
+
+        /* write a function that displays the x an y coordinate of the users mouse in a container */
+        /* hint - obj.clientX and obj.clientY return coordinates */
+        function showCoord(obj) {
+            var x = obj.clientX
+            var y = obj.clientY
+        }
+
+        /* write a function that makes the coordinate blank when the user does not have their mouse in the challenge box */
+        /* hint - use onmouseout */
+        function clearCoor() {
+
+        }
+
+        /* write a function that displays the size of the browser window of the user */
+        function screenSize() {
+
+        }
+    </script>
+
+</body>
+
+</html>

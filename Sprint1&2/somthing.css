@@ -1,0 +1,12 @@
+body{ 
+    background-image: url("dogbackground.png");
+}
+h1, h3{
+    text-align: center;
+}
+h1, h3, p, img{
+    background-color:rgba(16, 86, 177, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    color: #5e2404
+}

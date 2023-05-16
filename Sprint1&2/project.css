@@ -1,0 +1,22 @@
+body{
+    background-image: url("https://thumbs.dreamstime.com/b/green-land-game-seamless-pattern-illustration-abstract-super-mario-design-color-background-stylish-stripe-84300054.jpg")
+}
+h1, h2, h3, h4{
+    text-align: center
+}
+h1, h2, h3, h4, h5, h6, p, img, ul, ol, a{
+    border-radius: 10px;
+    padding: 10px;
+}
+h1, h4, p, ol{
+    background-color:rgba(223, 17, 17, 0.9);
+}
+h2, h5, img, a{
+    background-color:rgba(223, 110, 17, 0.9);
+}
+h3, h6, ul{
+    background-color:rgba(223, 209, 17, 0.9);
+}
+
+
+
