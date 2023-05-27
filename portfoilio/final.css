@@ -1,0 +1,121 @@
+@keyframes mymove {
+    from{ transform: translateX(-100%);}
+}
+
+.animation1 {
+    animation: mymove 1s infinite;
+}
+
+.display {
+    /* Set the z-index to 999 */
+    z-index: 999;
+    height: 85px;
+    width: 345px;
+    background: #1b1b1b00;
+    border-radius: 6px;
+    /* set the text alight to center*/
+    text-align: center;
+}
+
+.display #time {
+    line-height: 85px;
+    color: rgb rgb(255, 215, 215);
+    /*Set the font size to 50px, font weight to 600 and letter spacing to 1px. */
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+nav {
+    text-align: center;
+    font-size: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 32%;
+}
+
+.column img {
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.portfolio {
+    float: left;
+    width: 33.333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333%;
+    padding: 10px;
+}
+
+.portfolio img {
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    height: 110vh;
+    background-image: linear-gradient(rgb(0, 0, 255), rgb(255, 0, 0));
+    background-repeat: no-repeat;
+}
+
+h1,
+p,
+img,
+ul,
+ol,
+h2 {
+    border-radius: 10px;
+    background-color: rgba(255, 0, 34, 0.8);
+    color: white;
+    padding: 4px;
+}
+
+img {
+    max-width: 150px;
+}
+
+nav {
+    background-color: lightslategray;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+button {
+    background-color: rgb(190, 28, 177);
+    width: 135px;
+    height: 45px;
+}
+
+button:hover {
+    background-color: rgb(54, 30, 189);
+    text-decoration: underline;
+    width: 150px;
+    height: 50px;
+}
