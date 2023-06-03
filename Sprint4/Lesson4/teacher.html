@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+    <style>
+        .box {
+            background-color: #CBC1E1;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .coordinateBox {
+            background-color: white;
+            margin: 20px auto;
+            cursor: pointer;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onresize="screenSize()">
+    <div class="center">
+        <!-- mouseouver and mouseon event -->
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" class="box">
+            Mouse over me
+        </div>
+
+        <!-- onclick example -->
+        <h2 onclick="this.innerHTML='You found secret text!'">Click on this text!</h2>
+    
+        <!-- hidden text -->
+        <h2>Hidden Element!</h2>
+        <button type="button" onclick="document.getElementById('hidden').style.display='block'">Click me to show hidden text!</button>
+        <button type="button" onclick="document.getElementById('hidden').style.display='none'">Click me to hide hidden text!</button>
+        <p id="hidden" style="display: none;">Hello World!</p>
+
+        <!-- challenges -->
+        <div class="coordinateBox" onmousemove="showCoord(event)" onmouseout="clearCoor()">
+            <p id="coordinates"></p>
+        </div>
+
+        <p  id="screenSize"></p>
+    </div>
+
+    <script>
+        function mOver(obj) {
+            console.log(obj);
+            obj.innerHTML = "Secret Text"
+        }
+
+        function mOut(obj) {
+            console.log(obj);
+            obj.innerHTML = "Mouse Over Me!"
+        }
+
+        /* challenges! */
+
+        /* write a function that displays the x an y coordinate of the users mouse in a container */
+        /* hint- clientX and clientY return coordinates */
+        function showCoord(obj) {
+            var x = obj.clientX;
+            var y = obj.clientY;
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("coordinates").innerHTML = coor;
+        }
+
+        /* write a function that makes the coordinate blank when the user does not have their mouse in the challenge box */
+        /* hint- use onmouseout */
+        function clearCoor() {
+            document.getElementById("coordinates").innerHTML = "Coordinates:()";
+        }
+        /* https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_onmousemove */
+
+
+        /* write a function that displays the size of the browser window of the user */
+        function screenSize() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("screenSize").innerHTML = txt;
+        }
+        /* https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_onresize */
+
+    </script>
+
+</body>
+
+</html>
