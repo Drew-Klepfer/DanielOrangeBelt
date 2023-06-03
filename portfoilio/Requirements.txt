@@ -1,6 +1,6 @@
-1) Use of bootstrap ✘
+1) Use of bootstrap ✔
 2) Use of flexbox ✔
 3) Use of CSS animation ✔
-4) Use of special positioning (static, sticky, fixed, etc.) ✘
+4) Use of special positioning (static, sticky, fixed, etc.) ✔
 5) Use of one of the clocks we worked on (Digital or analog) ✔
-6) A new page with a javascript game (Hangman, number guessing game, or something else) ✘
+6) A new page with a javascript game (Hangman, number guessing game, or something else) ✔
