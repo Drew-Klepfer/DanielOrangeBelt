@@ -1,20 +1,25 @@
+/* print 15 hearts <3 */
 function printHearts(){
-    for(var count = 0; count < 15; count++){
+    for(let index = 0; index < 15; index++){
         console.log("<3");
         document.getElementById("text").innerText += "<3" + '\xa0';
     }
 }
 
+/* print 10-20 in ascending order */
 function printAscending() {
-    for(var count = 10; count < 21; count++) {
-        console.log(count);
-        document.getElementById("ascending").innerText += count + '\xa0';
+    for (let index = 0; index < 11; index++){
+        i = 10
+        console.log(i + index);
+        document.getElementById("ascending").innerText += i + index + '\xa0';
     }
 }
 
+/* print 10-20 in descending order */
 function printDescending() {
-    for(var count = 20; count > 9; count--) {
-        console.log(count);
-        document.getElementById("descending").innerText += count + '\xa0';
+    for (let index = 11; index > 0; index--){
+        i = 9
+        console.log(i + index);
+        document.getElementById("descending").innerText += i + index + '\xa0';
     }
 }

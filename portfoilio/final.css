@@ -3,7 +3,7 @@
 }
 
 .animation1 {
-    animation: mymove 1s infinite;
+    animation: mymove 1s;
 }
 
 .display {
@@ -19,12 +19,13 @@
 
 .display #time {
     line-height: 85px;
-    color: rgb rgb(255, 215, 215);
+    color: rgb rgb(255, 255, 255);
     /*Set the font size to 50px, font weight to 600 and letter spacing to 1px. */
     font-size: 50px;
     font-weight: 600;
     letter-spacing: 1px;
     background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate 1.5s linear infinite;
 }
@@ -73,7 +74,8 @@ body {
     background-repeat: no-repeat;
 }
 
-h1,
+label,
+h1, 
 p,
 img,
 ul,
@@ -98,6 +100,7 @@ nav {
     font-size: 20px;
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 
 nav a:hover {
@@ -123,4 +126,8 @@ button:hover {
     min-height: 200px;
     min-width: 275px;
     margin: auto;
+}
+
+img {
+    border-radius: 20%;
 }

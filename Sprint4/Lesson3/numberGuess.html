@@ -30,43 +30,46 @@
         <input type="text" id="guessField" class="guessField">
         <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
     </div>
-
+    
     <!-- 1. add the script tag that will tell the browser we are going to use Javascript. Remember to close the tag above our closing body tag -->
-    <script>
-
-        var y = Math.floor(Math.random() * 10 + 1);
-
-        var guess = 1;
-
-        document.getElementById("submitguess").onclick = function () {
-            var x = document.getElementById("guessField").value;
-
-        }
-
-
-
-
-    </script>
 
     <!-- 2. Create a variable named y and assign the following value: Math.floor(Math.random() * 10 + 1) -->
 
-    <!-- 3. create one more variable that will keep track of the number of guesses. Name it guess and set the value to 1. -->
+    <!-- 3. create another variable that will keep track of the number of guesses. Name it guess and set the value to 1. -->
 
     <!-- 4. Get the guess from our user. To do this, we will create a listener for the submit button. -->
 
     <!-- document.getElementById("submitguess").onclick = function () { -->
 
-    <!-- 5. Get the value from the input field, 'guessField' and save it to a new variable, x -->
+        <!-- 5. Get the value from the input tag with the id 'guessField', and save it to a new variable called x -->
 
-    <!-- 6. Using conditional statements and the lines of code bellow create the logic to check if the user guessed
-    correctly. Use a js alert to give the user feedback -->
+        <!-- 6. Using conditional statements, check if the user guess matches the random number, y
+                remember, we need to account for all cases (>, <, =) -->
+
 
     <!-- } -->
 
-    <!-- 7. close the script tag -->
-
+    <!--7. close the script tag -->
+    <script>
+        var y = Math.floor(Math.random() * 10 + 1);
+        var guess = 1;
+        document.getElementById("submitguess").onclick = function() {
+            var x = document.getElementById("guessField").value;
+            console.log(x);
+            console.log(y);
+        }
+        if (x === y) {
+            alert("Great job!");
+            
+        }
+        if (x > y) {
+            alert("Too high! Try again.");
+        }
+        else{
+            alert("Too low! Try again.");
+        }
+    </script>
     
-
 </body>
 
 </html>
